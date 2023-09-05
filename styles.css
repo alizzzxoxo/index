@@ -9,19 +9,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     color: rgb(255, 255, 255);
     background-color: #828282;
   }
   
-  .input-section {
+  .input-section1 {
     display: flex;
     align-items: center;
     margin-right: 15px;
-    margin-top: 8px;
+    margin-top: 10px;
   }
   
-  .input-section input {
+  .input-section1 input {
+    margin-left: 15px;
+    margin-right: 10px;
+    padding: 5px;
+    height: 13px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  .input-section2 {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .input-section2 input {
     margin-left: 15px;
     margin-right: 10px;
     padding: 5px;
