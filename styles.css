@@ -33,6 +33,7 @@ body {
     display: flex;
     align-items: center;
     margin-right: 15px;
+    margin-bottom: 5px;
   }
   
   .input-section2 input {
