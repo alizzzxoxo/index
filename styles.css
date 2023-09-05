@@ -28,7 +28,36 @@ body {
     font-size: 16px;
     border-radius: 5px;
   }
+
+  .icon-link1 {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .icon-link1 img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .icon-link1:hover img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .icon-link2 {
+    display: flex;
+  }
   
+  .icon-link2 img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-link2:hover img {
+    width: 40px;
+    height: 40px;
+  }
+
   #approveId, #confirmationId, #tutorListId, #receiptId {
     width: 130px;
   }
