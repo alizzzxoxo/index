@@ -99,7 +99,7 @@ body {
   }
   
   #parent-reply-content {
-    height: 70px; 
+    height: 100px; 
     width: 300px;
     margin-top: 5px;
     margin-bottom: 0px;
@@ -112,7 +112,7 @@ body {
   }
 
   #tutor-reply-content{
-    height: 70px; 
+    height: 100px; 
     width: 300px;
     margin-top: 5px;
   }  
