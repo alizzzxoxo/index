@@ -83,6 +83,61 @@ body {
     display: inline;
 }
 
+/* 元素容器 */
+.conversation {
+    margin-bottom: 10px;
+  }
+  
+  /* 固定文字样式 */
+  .fixed-text {
+    display: inline-block;
+    margin-left: 7px;
+  }
+ 
+  /* 個案輸入框 */
+  #parent-reply {
+    height: 20px; 
+    width: 100px;
+    font-size: 18px;
+  }
+  
+  /* 個案信息輸入框 */
+  #parent-reply-content {
+    height: 60px; 
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }  
+
+  #tutor-reply{
+    height: 20px; 
+    width: 100px;
+    font-size: 18px;
+  }
+
+  #tutor-reply-content{
+    height: 60px; 
+    width: 200px;
+    margin-top: 5px;
+  }  
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+  }
+
+  .button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  /* 输入框和文本区域共享的样式 */
+  .input-field {
+    resize: none; /* 禁用文本区域的拖拉调整大小功能 */
+  }
+
   #approveId, #confirmationId, #tutorListId, #receiptId {
     width: 130px;
   }
