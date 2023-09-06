@@ -42,6 +42,36 @@
     <h3 style="display: inline;">搜尋個案: 🔎</h3>
     <input type="text" id="caseInput" placeholder="輸入個案編號或電話號碼" onkeydown="handleKeyDown(event, 'case')" oninput="filterNonNumeric(event, 'case')">
 </div>
+
+  <!-- 回覆的個案 -->
+<div class="conversation">
+    <input type="text" id="parent-reply" class="input-field" placeholder="個案編號:">
+    <span class="fixed-text">家長回覆:</span>
+    <br>
+    <textarea id="parent-reply-content" class="input-field" placeholder="回覆的信息:"></textarea>
+    <div class="button-group">
+        <button class="button" onclick="copyContent('parent-reply', 'parent-reply-content')">
+          <img src="copy-icon.png" alt="COPY" style="width: 30px; height: 30px; margin-right: 10px;" >
+        </button>
+        <button class="button" onclick="clearContent('parent-reply', 'parent-reply-content')">
+          <img src="delete-icon.png" alt="DEL" style="width: 30px; height: 30px;">
+        </button>
+    </div>
+</div>
+
+<!-- 回覆的導師 -->
+<div class="conversation">
+    <input type="text" id="tutor-reply" class="input-field" placeholder="導師編號:">
+    <span class="fixed-text">導師回覆:</span>
+    <br>
+    <textarea id="tutor-reply-content" class="input-field" placeholder="回覆的信息:"></textarea>
+    <div class="button-group">
+      <button class="button" onclick="copyContent('tutor-reply', 'tutor-reply-content')"></button>
+      <img src="copy-icon.png" alt="COPY" style="width: 30px; height: 30px; margin-right: 10px;" >
+      <button class="button" onclick="clearContent('tutor-reply', 'tutor-reply-content')"></button>
+      <img src="delete-icon.png" alt="DEL" style="width: 30px; height: 30px;">
+    </div>
+</div>
   
   <script src="script.js"></script>
   
