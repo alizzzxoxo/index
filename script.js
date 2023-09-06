@@ -61,3 +61,9 @@ function handleKeyDown(event) {
     }
   }
 }
+
+function filterNonNumeric(event) {
+  var input = event.target;
+  var filteredValue = input.value.replace(/[^0-9]/g, '');
+  input.value = filteredValue;
+}
