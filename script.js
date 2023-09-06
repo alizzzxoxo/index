@@ -58,3 +58,39 @@ function filterNonNumeric(event, type) {
   var filteredValue = input.value.replace(/[^0-9]/g, '');
   input.value = filteredValue;
 }
+
+function copyContent(inputId, textareaId) {
+    const input = document.getElementById(inputId);
+    const textarea = document.getElementById(textareaId);
+  
+    const contentToCopy = `${input.value} 家長回覆: ${textarea.value}`;
+    navigator.clipboard.writeText(contentToCopy)
+      .then(() => {
+        console.log('Content copied to clipboard:', contentToCopy);
+      })
+      .catch((error) => {
+        console.error('Error copying content to clipboard:', error);
+      });
+  }
+
+  function copyContent(inputId, textareaId) {
+    const input = document.getElementById(inputId);
+    const textarea = document.getElementById(textareaId);
+    
+    const contentToCopy = `${input.value} 導師回覆: ${textarea.value}`;
+    navigator.clipboard.writeText(contentToCopy)
+      .then(() => {
+        console.log('Content copied to clipboard:', contentToCopy);
+      })
+      .catch((error) => {
+        console.error('Error copying content to clipboard:', error);
+      });
+  }
+
+  function clearContent(inputId, textareaId) {
+    const input = document.getElementById(inputId);
+    const textarea = document.getElementById(textareaId);
+  
+    input.value = '';
+    textarea.value = '';
+  }
