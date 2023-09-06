@@ -32,38 +32,29 @@ function openURL(baseURL, inputId) {
   document.getElementById('createCaseBtn').addEventListener('click', function() {var url = 'https://www.tutorcircle.hk/panel/admin/cases_create/'; window.open(url, '_blank');
 });
 
-function handleKeyDown(event) {
+function handleKeyDown(event, type) {
   if (event.key === "Enter") {
-    var inputField = document.getElementById('inputField');
+    var inputField = type === 'tutor' ? document.getElementById('tutorInput') : document.getElementById('caseInput');
     var value = inputField.value;
 
-    if (value.length === 5) {
+    if (value.length === 5 && type === 'tutor') {
       var url = 'https://www.tutorcircle.hk/panel/admin/search_tutors/index.php?method=tutorid&wts_area_code=&query_value=' + value;
       window.open(url, '_blank');
-    } else if (value.length >= 8) {
+    } else if (value.length >= 8 && type === 'tutor') {
       var url = 'https://www.tutorcircle.hk/panel/admin/search_tutors/index.php?method=phoneno&wts_area_code=&query_value=' + value;
       window.open(url, '_blank');
-    }
-  }
-}
-
-function handleKeyDown(event) {
-  if (event.key === "Enter") {
-    var inputField2 = document.getElementById('inputField2');
-    var value = inputField2.value;
-
-    if (value.length === 5) {
+    } else if (value.length === 6 && type === 'case') {
       var url = 'https://www.tutorcircle.hk/panel/admin/cases_approve/case.php?id=' + value;
       window.open(url, '_blank');
-    } else if (value.length >= 8) {
+    } else if (value.length >= 8 && type === 'case') {
       var url = 'https://www.tutorcircle.hk/panel/admin/search_cases/index.php?method=tel&query_value=' + value;
       window.open(url, '_blank');
     }
   }
 }
 
-function filterNonNumeric(event) {
-   var input = event.target;
-   var filteredValue = input.value.replace(/[^0-9]/g, '');
+function filterNonNumeric(event, type) {
+  var input = event.target;
+  var filteredValue = input.value.replace(/[^0-9]/g, '');
   input.value = filteredValue;
 }
