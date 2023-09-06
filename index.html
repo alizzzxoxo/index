@@ -37,12 +37,11 @@
   </div>
 
   <div class="content">
-    <h3 style="display: inline;">Search Tutor: 🔎</h3>
-    <input type="text" id="inputField" placeholder="Tutor ID / Phone No." onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)" style="display: inline;">
-    <h3 style="display: inline;">Search Case: 🔎</h3>
-    <input type="text" id="inputField2" placeholder="Case ID / Phone No." onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)" style="display: inline;">
-    <h5>新功能仍在維護，暫時請勿使用</h5>
-  </div>
+    <h3 style="display: inline;">搜尋導師: 🔎</h3>
+    <input type="text" id="tutorInput" placeholder="輸入導師編號或電話號碼" onkeydown="handleKeyDown(event, 'tutor')" oninput="filterNonNumeric(event, 'tutor')">
+    <h3 style="display: inline;">搜尋個案: 🔎</h3>
+    <input type="text" id="caseInput" placeholder="輸入個案編號或電話號碼" onkeydown="handleKeyDown(event, 'case')" oninput="filterNonNumeric(event, 'case')">
+</div>
   
   <script src="script.js"></script>
   
