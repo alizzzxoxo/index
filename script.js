@@ -46,3 +46,18 @@ function handleKeyDown(event) {
     }
   }
 }
+
+function handleKeyDown(event) {
+  if (event.key === "Enter") {
+    var inputField2 = document.getElementById('inputField2');
+    var value = inputField2.value;
+
+    if (value.length === 5) {
+      var url = 'https://www.tutorcircle.hk/panel/admin/cases_approve/case.php?id=' + value;
+      window.open(url, '_blank');
+    } else if (value.length >= 8) {
+      var url = 'https://www.tutorcircle.hk/panel/admin/search_cases/index.php?method=tel&query_value=' + value;
+      window.open(url, '_blank');
+    }
+  }
+}
