@@ -10,22 +10,22 @@
   <div class="top-bar">
     <div class="input-section1">
       <label for="approveId">🔜Approve: </label>
-      <input type="text" id="approveId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)">
+      <input type="text" id="approveId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)">
     </div>
     <div class="input-section1">
       <label for="confirmationId">✅Confirmation: </label>
-      <input type="text" id="confirmationId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)">
+      <input type="text" id="confirmationId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)">
     </div>
   </div>
   
   <div class="top-bar">
     <div class="input-section2">
       <label for="tutorListId">👩🏼‍🏫Tutor List:</label>
-      <input type="text" id="tutorListId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)">
+      <input type="text" id="tutorListId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)">
     </div>
     <div class="input-section2">
       <label for="receiptId">💰Receipt:</label>
-      <input type="text" id="receiptId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)">
+      <input type="text" id="receiptId" placeholder="Case Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="6" onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)">
     </div>
 
     <a href="https://www.tutorcircle.hk/panel/admin/cases_create/" target="_blank" class="icon-link1">
@@ -37,10 +37,10 @@
   </div>
 
   <div class="content">
-    <h3 style="display: inline;">Search Tutor👩🏼‍🏫: </h3>
-    <input type="text" id="inputField" placeholder="Tutor ID / Phone No. 🔎" onkeydown="handleKeyDown(event)" style="display: inline;">
-    <h3 style="display: inline;">Search Case👨‍👩‍👧‍👦: </h3>
-    <input type="text" id="inputField2" placeholder="Case ID / Phone No. 🔎" onkeydown="handleKeyDown(event)" style="display: inline;">
+    <h3 style="display: inline;">Search Tutor: 🔎</h3>
+    <input type="text" id="inputField" placeholder="Tutor ID / Phone No." onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)" style="display: inline;">
+    <h3 style="display: inline;">Search Case: 🔎</h3>
+    <input type="text" id="inputField2" placeholder="Case ID / Phone No." onkeydown="handleKeyDown(event)" oninput="filterNonNumeric(event)" style="display: inline;">
 </div>
   
   <script src="script.js"></script>
