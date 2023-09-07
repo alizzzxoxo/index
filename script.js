@@ -63,7 +63,7 @@ function copyContent2(inputId, textareaId) {
     const input = document.getElementById(inputId);
     const textarea = document.getElementById(textareaId);
   
-    const contentToCopy = `${input.value} ${document.querySelector('.fixed-text2').textContent} ${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
+    const contentToCopy = `${input.value} ${document.querySelector('.fixed-text2').textContent}\n${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
     navigator.clipboard.writeText(contentToCopy)
       .then(() => {
         console.log('Content copied to clipboard:', contentToCopy);
@@ -77,7 +77,7 @@ function copyContent2(inputId, textareaId) {
     const input = document.getElementById(inputId);
     const textarea = document.getElementById(textareaId);
     
-    const contentToCopy = `${input.value} ${document.querySelector('.fixed-text1').textContent} ${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
+    const contentToCopy = `${input.value} ${document.querySelector('.fixed-text1').textContent}\n${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
       .then(() => {
         console.log('Content copied to clipboard:', contentToCopy);
       })
