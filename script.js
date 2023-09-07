@@ -59,11 +59,11 @@ function filterNonNumeric(event, type) {
   input.value = filteredValue;
 }
 
-function copyContent(inputId, textareaId) {
+function copyContent2(inputId, textareaId) {
     const input = document.getElementById(inputId);
     const textarea = document.getElementById(textareaId);
   
-    const contentToCopy = `${input.value} 個案回覆: ${textarea.value}`;
+    const contentToCopy = `${input.value} ${document.querySelector('.fixed-text2').textContent} ${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
     navigator.clipboard.writeText(contentToCopy)
       .then(() => {
         console.log('Content copied to clipboard:', contentToCopy);
@@ -73,12 +73,11 @@ function copyContent(inputId, textareaId) {
       });
   }
 
-  function copyContent(inputId, textareaId) {
+  function copyContent1(inputId, textareaId) {
     const input = document.getElementById(inputId);
     const textarea = document.getElementById(textareaId);
     
-    const contentToCopy = `${input.value} 導師回覆: ${textarea.value}`;
-    navigator.clipboard.writeText(contentToCopy)
+    const contentToCopy = `${input.value} ${document.querySelector('.fixed-text1').textContent} ${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
       .then(() => {
         console.log('Content copied to clipboard:', contentToCopy);
       })
