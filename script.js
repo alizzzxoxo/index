@@ -37,8 +37,8 @@ function handleKeyDown(event, type) {
     var inputField = type === 'tutor' ? document.getElementById('tutorInput') : document.getElementById('caseInput');
     var value = inputField.value;
 
-    if (value.length === 5 && type === 'tutor') {
-      var url = 'https://www.tutorcircle.hk/panel/admin/search_tutors/index.php?method=tutorid&wts_area_code=&query_value=' + value;
+    if ((value.length === 4 || value.length === 5) && type === 'tutor') {
+    } var url = 'https://www.tutorcircle.hk/panel/admin/search_tutors/index.php?method=tutorid&wts_area_code=&query_value=' + value;
       window.open(url, '_blank');
     } else if (value.length >= 8 && type === 'tutor') {
       var url = 'https://www.tutorcircle.hk/panel/admin/search_tutors/index.php?method=phoneno&wts_area_code=&query_value=' + value;
