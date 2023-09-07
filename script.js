@@ -63,7 +63,7 @@ function copyContent(inputId, textareaId) {
     const input = document.getElementById(inputId);
     const textarea = document.getElementById(textareaId);
   
-    const contentToCopy = `${input.value} 家長回覆: ${textarea.value}`;
+    const contentToCopy = `${input.value} 個案回覆: ${textarea.value}`;
     navigator.clipboard.writeText(contentToCopy)
       .then(() => {
         console.log('Content copied to clipboard:', contentToCopy);
