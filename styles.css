@@ -103,8 +103,8 @@ body {
   }
   
   #parent-reply-content {
-    height: 100px; 
-    width: 300px;
+    height: 70px; 
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 0px;
   }  
@@ -116,8 +116,8 @@ body {
   }
 
   #tutor-reply-content{
-    height: 100px; 
-    width: 300px;
+    height: 70px; 
+    width: 250px;
     margin-top: 5px;
   }  
   
