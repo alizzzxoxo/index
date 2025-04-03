@@ -107,8 +107,8 @@ function openCaseInDoubleTabs() {
   const caseNumber = document.getElementById('doubleOpenId').value;
   if (caseNumber.length === 6) {
     // 替換成您實際的網址格式，這裡用範例網址
-    const url1 = `https://www.tutorcircle.hk/panel/admin/tutor_list/?case_id=${caseNumber}`;
-    const url2 = `https://www.tutorcircle.hk/panel/admin/receipt/?case_id=${caseNumber}`;
+    const url1 = `https://www.tutorcircle.hk/panel/admin/cases_confirm/case.php?id=${caseNumber}`;
+    const url2 = `https://www.tutorcircle.hk/panel/admin/cases_confirm/classreceipt.php?caseid=${caseNumber}`;
     
     window.open(url1, '_blank');
     window.open(url2, '_blank');
