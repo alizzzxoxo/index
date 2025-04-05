@@ -59,39 +59,24 @@ var filteredValue = input.value.replace(/[^0-9]/g, '');
 input.value = filteredValue;
 }
 
+// 個案回覆複製功能
 function copyContent2(inputId, textareaId) {
-  const input = document.getElementById(inputId);
-  const textarea = document.getElementById(textareaId);
-
-  const contentToCopy = `${input.value} ${document.querySelector('.fixed-text2').textContent}\n${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
-  navigator.clipboard.writeText(contentToCopy)
-    .then(() => {
-      console.log('Content copied to clipboard:', contentToCopy);
-    })
-    .catch((error) => {
-      console.error('Error copying content to clipboard:', error);
-    });
+  const caseNumber = document.getElementById(inputId).value;
+  const replyContent = document.getElementById(textareaId).value;
+  navigator.clipboard.writeText(`${caseNumber}個案回覆：${replyContent}`);
 }
 
+// 導師回覆複製功能
 function copyContent1(inputId, textareaId) {
-  const input = document.getElementById(inputId);
-  const textarea = document.getElementById(textareaId);
-  
-  const contentToCopy = `${input.value} ${document.querySelector('.fixed-text1').textContent}\n${textarea.value}`;    navigator.clipboard.writeText(contentToCopy)
-    .then(() => {
-      console.log('Content copied to clipboard:', contentToCopy);
-    })
-    .catch((error) => {
-      console.error('Error copying content to clipboard:', error);
-    });
+  const tutorNumber = document.getElementById(inputId).value;
+  const replyContent = document.getElementById(textareaId).value;
+  navigator.clipboard.writeText(`${tutorNumber}導師回覆：${replyContent}`);
 }
 
+// 清除功能保持不變
 function clearContent(inputId, textareaId) {
-  const input = document.getElementById(inputId);
-  const textarea = document.getElementById(textareaId);
-
-  input.value = '';
-  textarea.value = '';
+  document.getElementById(inputId).value = '';
+  document.getElementById(textareaId).value = '';
 }
 
 
